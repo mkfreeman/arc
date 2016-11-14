@@ -1,0 +1,23 @@
+/* TextPath */
+@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+.textPathWrapper {
+    margin-top:100px;
+    text-align: center;
+}
+.textPathWrapper path {
+    fill:none;
+    stroke-width:1px;
+    stroke:black;
+}
+
+.textPathWrapper text {
+    font-family: 'Coming Soon', cursive;
+}
+
+.textPathWrapper svg {
+    border:1px solid #d3d3d3;
+}
+
+#text-path {
+    stroke-width:0px;
+}
