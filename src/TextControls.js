@@ -1,27 +1,29 @@
 // TextPath element
 import React from 'react';
-import {Drawer, MuiThemeProvider, TextField} from 'material-ui'
-// Needed for onTouchTap (to avoid warning from material-ui)
-// See: https://github.com/callemall/material-ui/issues/4670
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
+import {Drawer, TextField} from 'material-ui'
+import './TextControls.css';
+
 
 var TextControls = React.createClass({
     // Render svg and expose it to this.root
     render() {
         return (
-            <MuiThemeProvider>
-                <Drawer open={false}>
-                    <h1>Controls</h1>
-                    {this.props.controls.map(function(control, i){
-                        return <TextField type="number"
-                                          defaultValue={100}
-                                          key={"control-" + i}
-                                          floatingLabelText="Floating Label Text"/>
-                    })}
+            <Drawer className="menu">
+                <h1>Controls</h1>
+                {Object.keys(this.props.controls).map(function(control, i){
+                    let type = control == 'text' | control == 'startUp' ? 'text' : 'number';
+                    return <TextField
+                                      defaultValue={this.props.controls[control]}
+                                      onChange={this.props.changeEvent}
+                                      id={control}
+                                      type={type}
+                                      key={"control-" + i}
+                                      className="textField"
+                                      floatingLabelText={control}/>
+                }.bind(this))}
 
-                </Drawer>
-            </MuiThemeProvider>)
+            </Drawer>
+        );
     }
 });
 export default TextControls;

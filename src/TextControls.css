@@ -1,0 +1,13 @@
+.textField {
+    margin:20px;
+}
+
+h1 {
+    border-bottom:1px solid #d3d3d3;
+    font-weight:100;
+    font-size:3rem;
+}
+
+.menu > div {
+    width:300px !important;
+}

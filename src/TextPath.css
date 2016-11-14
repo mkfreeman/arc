@@ -1,20 +1,26 @@
 /* TextPath */
-@import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+/*@import url('https://fonts.googleapis.com/css?family=Coming+Soon');*/
+@font-face {
+    font-family: 'Coming Soon';
+    src: url('./ComingSoon.ttf');
+}
+
 .textPathWrapper {
     margin-top:100px;
     text-align: center;
+    margin-left:300px;
 }
-.textPathWrapper path {
+.pathSvg path {
     fill:none;
     stroke-width:1px;
     stroke:black;
 }
 
-.textPathWrapper text {
+.pathSvg text {
     font-family: 'Coming Soon', cursive;
 }
 
-.textPathWrapper svg {
+.pathSvg {
     border:1px solid #d3d3d3;
 }
 
