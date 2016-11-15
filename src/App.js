@@ -10,7 +10,7 @@ import {MuiThemeProvider} from 'material-ui'
 var App = React.createClass({
     getInitialState() {
         return {
-            text:'Write your own text here',
+            text:'The arc of the moral universe is long, but it bends towards justice...',
             fontSize:30,
             xDiff:400,
             yAnchorDiff:100,
@@ -28,8 +28,8 @@ var App = React.createClass({
             <MuiThemeProvider>
                 <div>
                     <TextControls controls={this.state}
-                                  changeEvent={this.changeValue}/>
-                    <TextPath id="chart" width={window.innerWidth - 350} height={400} settings={this.state}/>
+                        changeEvent={this.changeValue}/>
+                    <TextPath id="chart" width={window.innerWidth - 350} height={800} settings={this.state}/>
                     <SaveButtons chartId="chart"/>
                 </div>
             </MuiThemeProvider>

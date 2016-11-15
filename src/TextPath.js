@@ -17,6 +17,13 @@ var TextPath = React.createClass({
     // Bind initial g element
     setUp () {
         this.g = d3.select(this.root).append("g");
+        this.borderRect = d3.select(this.root).append('rect')
+                        .attr("width", this.props.width)
+                        .attr('height', this.props.height)
+                        .style('stroke', '#d3d3d3')
+                        .style('stroke-width', '1px')
+                        .style('fill', 'none')
+
         this.textCurve = this.g.append('path').attr('id', 'text-path')
         this.pathCurve = this.g.append('path').attr('id', 'curve-path')
         this.update();
